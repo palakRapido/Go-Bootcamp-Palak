@@ -11,7 +11,10 @@ type Rating struct {
 	AvgRating float64
 	Ratings   []UserRating
 }
-
+type Comment struct {
+	Comment string
+	Date    time.Time
+}
 type UserRating struct {
 	UID      int
 	Rating   float64
