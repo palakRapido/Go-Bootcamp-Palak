@@ -2,82 +2,36 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/fatih/color"
+	"goBootCamp/rating/ratings"
 )
 
 func main() {
+	fmt.Println("Welcome to Rating Project!")
 
-	color.Red("Hello, World!")
+	// Create a Rating instance
+	productRating := &ratings.Rating{
+		ID:        "product123",
+		AvgRating: 0,
+		Ratings:   []ratings.UserRating{},
+	}
 
-	type ProductReview struct {
-		ProductName  string
-		CustomerName string
-		Rating       int
-		Comments     []string
+	e := productRating.AddRating(1, 5.0, "Excellent product!")
+	if e != nil {
+		fmt.Println(e)
+
 	}
-	
-	// Create a ProductReview struct instance
-	review := ProductReview{
-		ProductName:  "Apple iPhone",
-		CustomerName: "Palak",
-		Rating:       4,
-		Comments:     []string{"Great product!"},
+
+	e = productRating.AddRating(2, -5.0, "Very good quality")
+	if e != nil {
+		fmt.Println(e)
+
 	}
-	
-	// Append "nice" to comments
-	review.Comments = append(review.Comments, "nice")
-	
-	// Print the review
-	fmt.Println("\n========== Product Review ==========")
-	fmt.Printf("Product: %s\n", review.ProductName)
-	fmt.Printf("Customer: %s\n", review.CustomerName)
-	fmt.Printf("Rating: %d/5\n", review.Rating)
-	
-	// Print stars based on rating
-	fmt.Print("Stars: ")
-	for i := 0; i < review.Rating; i++ {
-		fmt.Print("⭐")
+
+	e = productRating.AddRating(3, 2.0, "Highly recommended")
+	if e != nil {
+		fmt.Println(e)
+
 	}
-	fmt.Println()
-	
-	fmt.Println("\nComments:")
-	for i, comment := range review.Comments {
-		fmt.Printf("%d. %s\n", i+1, comment)
-	}
-	fmt.Println("====================================")
-	
-	// Switch case for rating feedback
-	switch review.Rating {
-	case 5, 4:
-		color.Green("\nThanks for your positive feedback!")
-	case 3, 2, 1:
-		color.Red("\nWe regret and will try to improve!")
-	default:
-		fmt.Println("\nInvalid rating")
-	}
-	
-	fmt.Println("\nLength of comments:", len(review.Comments))
-	
-		
-	// Create a map of fruits with prices
-		fruits := map[string]int{
-			"Apple":      50,
-			"Banana":     30,
-			"Strawberry": 120,
-		}
-					
-		// Check if "Banana" exists in map
-		price, exists := fruits["Orange"]
-		if exists {
-			fmt.Printf("Orange exists in map with price: $%d\n", price)
-		} else {
-			fmt.Println("Orange does not exist in map")
-		}
-		
-		fmt.Println("\nFruits Map:")
-		for fruit, price := range fruits {
-			fmt.Printf("%s: $%d\n", fruit, price)
-		}
+	fmt.Println(productRating)
 
 }
