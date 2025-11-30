@@ -1,0 +1,19 @@
+{
+  "id": 1,
+  "name": "jeans",
+  "price": 100,
+  "quantity": 1,
+  "brand": "Nike",
+  "category": "clothes",
+  "description": "blue jeans ",
+  "subcategories": "jeans",
+  "createdAt":  "2025-10-20T12:00:00Z",
+  "updatedAt":  "2025-11-20T12:00:00Z",
+  "image": ["https://example.com/image1.jpg", "https://example.com/image2.jpg"]
+
+}
+
+Get- with body
+/product/category
+/category/brand
+

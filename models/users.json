@@ -1,0 +1,20 @@
+{
+  "name": "Palak",
+  "_id" : 1,
+  "email": "palak@rapido.bike",
+  "password": "wewefer",
+  "roles": ["Admin" ,"user"],
+  "gender": "female",
+  "address": [{
+            "id": 1,
+            "latitude":"12.93",
+            "longitude" : "77.93",
+            "address": "whitefield",
+            "city": "Bangalore",
+            "pincode": "560000"
+
+  }],
+  "mobile": "8527111111",
+  "createdAt":  "2025-10-20T12:00:00Z",
+  "updatedAt":  "2025-11-20T12:00:00Z",
+}

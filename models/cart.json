@@ -1,0 +1,19 @@
+{
+"id" : "cart1",
+  "userId" : "1",
+  "products": [
+    {
+      "quantity": 2,
+      "price": 100,
+      "discount": 10,
+      "total": 180,
+      "productId": "1"
+    }
+  ],
+  "Grandtotal" : 180,
+  "createdAt":  "2025-10-20T12:00:00Z",
+  "updatedAt":  "2025-11-20T12:00:00Z"
+
+}
+
+
